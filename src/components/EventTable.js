@@ -1,5 +1,7 @@
 const React = require('react');
 const moment = require('moment');
+const EditForm = require('./EditForm');
+import { Button, Modal, ContolLabel } from 'react-bootstrap';
 
 const EventTable = props => {
   const { events, editEvent, deleteEvent } = props;
@@ -21,7 +23,7 @@ const EventTable = props => {
               <td className="eventDetails">{event.eDetails}</td>
               <td className="eventStart">{event.eStart}</td>
               <td className="eventEnd">{event.eEnd}</td>
-              <td><button onClick={() => editEvent(event.id)} className="btn btn-warning">Edit</button></td>
+              <td>{/*<button onClick={() => editEvent(event.id)} className="btn btn-warning">Edit</button>*/}</td>
               <td><button onClick={() => deleteEvent(event.id)} className="btn btn-danger">X</button></td>
             </tr>
           ))}
